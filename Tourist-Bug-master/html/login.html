@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <script defer src="../js/login.js"></script>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <main>
+      <div class="circle-red"></div>
+      <div class="circle-out"></div>
+      <div id="loader" class="loader-animation">
+        <h1 class="loading-namer">Loading Please Wait</h1>
+      </div>
+      <section class="login-section">
+        <form id="form" class="form">
+          <h1 id="form-title" class="form-title">Login</h1>
+          <input
+            name="username"
+            id="username"
+            class="text-field"
+            type="text"
+            placeholder="username"
+          />
+          <input
+            name="password"
+            id="password"
+            class="text-field"
+            type="password"
+            placeholder="password"
+          />
+          <button id="submit-btn" class="submit-btn" type="submit">
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

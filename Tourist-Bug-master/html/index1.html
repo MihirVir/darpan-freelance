@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title for website -->
+    <title>Travel Bug</title>
+
+    <!-- css stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1216px)"
+      href="../css/phone.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- website logo -->
+    <link rel="icon" href="../img/logo.png" />
+
+    <!-- link for google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link for fontawesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/deb091a632.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .form-container {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .location-form {
+        width: 100%;
+        height: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+      }
+      .text-field-home {
+        height: 30px;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 0.25rem;
+        font-size: 1rem;
+        color: black;
+        border: none;
+        font-weight: 600;
+      }
+      .text-field-home::placeholder {
+        color: gray;
+      }
+      input[type="date"] {
+        color: gray;
+        font-size: 1rem;
+      }
+      .input-container-home {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .input-container-home > label {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+      .search-btn {
+        align-self: center;
+      }
+      .form-wrapper-2 {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        gap: 1em;
+        height: auto;
+      }
+      .search-btn {
+        margin-top: 4px;
+        padding: 0.5rem;
+        width: 150px;
+        height: 50px;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: black;
+        font-weight: 900;
+        font-size: 1rem;
+        transition: all 200ms ease-in-out;
+      }
+      .nav-color-changer {
+        background-color: black;
+      }
+      .search-btn:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="nav-header">
+      <!-- logo and company name -->
+      <ul class="logo">
+        <img src="../img/logo.png" alt="Travel Bug" />
+        <h3>TRAVEL BUG</h3>
+      </ul>
+      <!-- menu/navbar -->
+      <ul id="menu">
+        <li class="menu-item"><a href="#">Home</a></li>
+        <li class="menu-item"><a href="#services">Services</a></li>
+        <li class="menu-item"><a href="#spots">Spots</a></li>
+        <li class="menu-item"><a href="#registration">Registration</a></li>
+        <li class="menu-item"><a href="#contact">Contact Us</a></li>
+      </ul>
+    </header>
+    <div class="form-container">
+      <form id="form" class="location-form">
+        <div class="form-wrapper-2">
+          <div class="input-container-home">
+            <label for="location">Location:</label>
+            <input
+              class="text-field-home"
+              type="text"
+              id="location"
+              name="location"
+              placeholder="location"
+            />
+          </div>
+          <div class="input-container-home">
+            <label for="checkin">Check-in:</label>
+            <input
+              class="text-field-home"
+              type="date"
+              id="checkin"
+              name="checkin"
+            />
+          </div>
+          <div class="input-container-home">
+            <label for="checkout">Check-out:</label>
+            <input
+              class="text-field-home"
+              type="date"
+              id="checkout"
+              name="checkout"
+            />
+          </div>
+          <div class="input-container-home">
+            <button class="search-btn" type="submit" id="search">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="hotels"></div>
+
+    <!-- home -->
+    <section id="home">
+      <!-- short description of company -->
+      <h1 class="text-primary center">Are you ready to travel?</h1>
+      <p class="text-para center">
+        Are you ready to travel then packs your bags and start your journey with
+        us.We help you guys to choose the best package and offer you hustle free
+        trip
+      </p>
+    </section>
+
+    <!-- services -->
+    <section id="services">
+      <div class="empty"></div>
+      <h1 class="text-primary center">Our Services</h1>
+      <div id="service-menu" class="center">
+        <!-- Service 1 -->
+        <div class="service-item">
+          <img src="../img/services/food.jpeg" alt="food" />
+          <h3 class="text-secondary">Food</h3>
+          <p class="text-para">
+            We help you guys to find the best places to eat.Also helps to find
+            you good quality of foods
+          </p>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-item">
+          <img src="../img/services/travel.jpeg" alt="travel" />
+          <h3 class="text-secondary">Transport</h3>
+          <p class="text-para">
+            We provide comfortable and offardable rides for you.Which will help
+            you to reach your destination without any hustle
+          </p>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-item">
+          <img src="../img/services/accomodation.jpeg" alt="accomodation" />
+          <h3 class="text-secondary">Accomodation</h3>
+          <p class="text-para">
+            we provide best and affordable accomadation and also different
+            option for accomadation
+          </p>
+        </div>
+        <!-- Service 4 -->
+        <div class="service-item">
+          <img src="../img/services/photography.jpeg" alt="photography" />
+          <h3 class="text-secondary">Tour Guide</h3>
+          <p class="text-para">
+            We also helps in providing a tour guide which will give a tour of
+            the city and tells you about the famous places of the city
+          </p>
+        </div>
+        <!-- Service 5 -->
+        <div class="service-item">
+          <img src="../img/services/recreation.jpg" alt="recreation" />
+          <h3 class="text-secondary">Rerecreational Activities</h3>
+          <p class="text-para">
+            We also provide different types of recreational Activities like some
+            sort of sport activities and many other which are lot of fun
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- quote -->
+    <section id="quote">
+      <img src="../img/quote.png" alt="" />
+    </section>
+
+    <!-- famous spots -->
+    <section id="spots">
+      <h1 class="text-primary center">Famous Spots</h1>
+      <div id="spot-menu" class="center">
+        <!-- Spot 1 -->
+        <div class="spot-item">
+          <img src="../img/spots/faisal-mosque.jpg" alt="food" />
+          <h3 class="text-secondary">Faisal Mosque</h3>
+          <p class="text-para">
+            Located in the national capital city of Islamabad, the Faisal Mosque
+            is the largest mosque in Pakistan. You’ll find it at the north end
+            of Faisal Avenue, at the northernmost end of the city and nestled at
+            the foot of Margalla Hills, the westernmost foothills of the
+            Himalayas.
+          </p>
+        </div>
+        <!-- Spot 2 -->
+        <div class="spot-item">
+          <img src="../img/spots/eiffel-tower.jpg" alt="food" />
+          <h3 class="text-secondary">Eiffel Tower</h3>
+          <p class="text-para">
+            It is Paris most famous and most visited tourist attraction. Every
+            day thousands of visitors flock to the tower to enjoy the marvelous
+            views from the top and the evening light shows.
+          </p>
+        </div>
+        <!-- Spot 3 -->
+        <div class="spot-item">
+          <img src="../img/spots/colosseum.jpg" alt="food" />
+          <h3 class="text-secondary">Colosseum</h3>
+          <p class="text-para">
+            The Colosseum is an amphitheatre built in Rome under the Flavian
+            emperors of the Roman Empire. It is also called the Flavian
+            Amphitheatre. It is an elliptical structure made of stone, concrete,
+            and tuff, and it stands four stories tall at its highest point.
+          </p>
+        </div>
+        <!-- Spot 4 -->
+        <div class="spot-item">
+          <img src="../img/spots/status-of-liberty.jpg" alt="food" />
+          <h3 class="text-secondary">Statue of Liberty</h3>
+          <p class="text-para">
+            "The Statue of Liberty Enlightening the World" was a gift of
+            friendship from the people of France to the United States and is
+            recognized as a universal symbol of freedom and democracy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- registration -->
+    <section id="registration">
+      <!-- Registration Form -->
+      <form action="#" id="reg-form">
+        <!-- form header -->
+        <h1 class="text-primary center">Register Now!</h1>
+        <!-- form body -->
+
+        <div class="form-group">
+          <i class="fa fa-envelope"></i>
+          <input
+            type="email"
+            name=""
+            id="email"
+            placeholder="Enter your Email"
+            class="text-para"
+          />
+        </div>
+
+        <div class="form-group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="password"
+            name=""
+            id="password"
+            placeholder="Enter your Password"
+            class="text-para"
+          />
+        </div>
+
+        <!-- submit button -->
+        <button type="submit" class="btn text-para">Submit</button>
+      </form>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+      <!-- about section -->
+      <ul id="about" class="footer-item">
+        <ul class="logo">
+          <img src="../img/logo.png" alt="Travel Bug" />
+          <h3>TRAVEL BUG</h3>
+        </ul>
+        <p class="text-para">Are you ready to travel.</p>
+        <p class="text-para">Get ready and prepare your trip with Travel Bug</p>
+      </ul>
+      <!-- contact us section -->
+      <ul id="contact" class="footer-item center">
+        <h2 class="text-secondary center">Contact Us</h2>
+        <div class="contact-item">
+          <!-- icon -->
+          <i class="fa fa-map-marker"></i>
+          <p class="text-para">Block no., City, Country, Universe.</p>
+        </div>
+        <div class="contact-item">
+          <!-- icon -->
+          <i class="fa fa-envelope"></i>
+          <p class="text-para">customercare@travelbug.com</p>
+        </div>
+      </ul>
+      <!-- copyright section -->
+      <ul class="footer-item" id="copyright">
+        <p class="text-para">2021 &copy; Travel Bug, all rights reserved</p>
+      </ul>
+    </footer>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
