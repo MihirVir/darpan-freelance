@@ -129,3 +129,8 @@ button:hover {
   bottom: -30%;
   border-radius: 50%;
 }
+.a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
